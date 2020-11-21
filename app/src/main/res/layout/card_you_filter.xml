@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/neon">
+    <RadioGroup
+        android:id="@+id/radioGroupYou"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/neon"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/you_stories"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.100"
+            android:button="@null"
+            android:background="@color/white"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:gravity="center"
+            android:text="@string/stories" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/dark_blur" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/you_pages"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.100"
+            android:button="@null"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:gravity="center"
+            android:text="@string/pages" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/dark_blur" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/you_photos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.100"
+            android:button="@null"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:gravity="center"
+            android:text="@string/photos" />
+
+    </RadioGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

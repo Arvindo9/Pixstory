@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="data"
+            type="com.app.pixstory.ui.messages.messageUser.messageUserAdapter.MessageUserAdapterViewModel" />
+    </data>
+
+<FrameLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    style="@style/clickThemeNormal">
+
+    <RelativeLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/neon">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/delete_icon"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/foregroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:background="@color/white"
+        android:elevation="@dimen/_16sdp"
+        app:elevation="@dimen/_16sdp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.250">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.app.pixstory.utils.RoundedImageView
+                        app:ImageUrlBinding="@{data.profilePic}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        tools:src="@drawable/user"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/badges"
+                    android:visibility="@{data.badge ? View.VISIBLE : View.GONE}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_toStartOf="@+id/follower_ll"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:visibility="@{data.badge1.isEmpty() ? View.GONE : View.VISIBLE}"
+                        app:ImageUrlBinding="@{data.badge1}"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/_2sdp"
+                        tools:srcCompat="@drawable/ic_badge_public_feagure" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:visibility="@{data.badge2.isEmpty() ? View.GONE : View.VISIBLE}"
+                        app:ImageUrlBinding="@{data.badge2}"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/_2sdp"
+                        tools:srcCompat="@drawable/ic_badge_topic_expert" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:visibility="@{data.badge3.isEmpty() ? View.GONE : View.VISIBLE}"
+                        app:ImageUrlBinding="@{data.badge3}"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/_2sdp"
+                        tools:srcCompat="@drawable/ic_badge_star_user" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/proTag"
+                android:visibility="@{data.pro ? View.VISIBLE : View.GONE}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|top"
+                tools:visibility="visible"
+                app:srcCompat="@drawable/ic_pro" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/messageUserCardData"
+            layout="@layout/message_user_card_data"
+            app:data="@{data}"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.750" />
+
+        <include
+            android:id="@+id/messageUserCardDataAudio"
+            layout="@layout/message_user_card_data_audio"
+            app:data="@{data}"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.750" />
+
+        <include
+            android:id="@+id/messageUserCardDataBulletin"
+            layout="@layout/message_user_card_data_bulletin"
+            app:data="@{data}"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.750" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
+</layout>

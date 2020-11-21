@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layoutToolbar"
+            layout="@layout/toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:text="@string/select_all"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/_5sdp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/blue" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:text="@string/delete"
+                android:padding="@dimen/_5sdp"
+                android:layout_centerInParent="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/create_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:text="@string/create_story"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/shape_button"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:padding="@dimen/_5sdp"/>
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            tools:itemCount="5"
+            tools:listitem="@layout/adapter_select_image"/>
+
+
+    </LinearLayout>
+</layout>

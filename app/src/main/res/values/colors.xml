@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="neon">#E9FF08</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#000000</color>
+    <color name="white_smoke">#F3F3F3</color>
+    <color name="facebook">#4267B2</color>
+    <color name="google">#E74133</color>
+    <color name="email">#FF9901</color>
+    <color name="linked">#0E76A8</color>
+    <color name="mobile">#4D4D4D</color>
+    <color name="dark_blur">#ccB5B5B5</color>
+    <color name="for_ground">#40B5B5B5</color>
+    <color name="red">#ff0000</color>
+    <color name="bottom_start">#585858</color>
+    <color name="bottom_end">#C7C7C7</color>
+    <color name="blue">#2C7FFC</color>
+    <color name="dark">#EEE</color>
+    <color name="messageText">#C7C7C7</color>
+    <color name="gray">#ccB5B5B5</color>
+    <color name="transparent">#80000000</color>
+
+    <color name="messageSend">#f2f6ff</color>
+    <color name="messageReceive">#fdffd8</color>
+
+
+    <color name="textColorDefault">#575555</color>
+
+    <array name="indicator_colors">
+        <item>@color/black</item>
+        <item>@color/black</item>
+        <item>@color/black</item>
+        <item>@color/black</item>
+    </array>
+</resources>

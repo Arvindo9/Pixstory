@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/education"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.200"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.700"
+            android:background="@drawable/shape_bottom_sheet_25_25_0_0"
+            android:orientation="vertical"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="0dp"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/close_education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_down_arrow"
+                tools:ignore="ContentDescription" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/shape_rectangle_gray">
+
+                <EditText
+                    android:id="@+id/degree"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:hint="@string/Degree"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/institute"
+                    android:fontFamily="@font/source_sans_pro_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/shape_rectangle_gray"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <EditText
+                    android:id="@+id/institute"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:hint="@string/Institute"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/university"
+                    android:imeOptions="actionNext"
+                    android:fontFamily="@font/source_sans_pro_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/shape_rectangle_gray"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <EditText
+                    android:id="@+id/university"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:hint="@string/University"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:fontFamily="@font/source_sans_pro_regular"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/send_education"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:text="@string/Send"
+                android:background="@drawable/rectangle_yellow"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/source_sans_pro_regular"/>
+
+            <ListView
+                android:id="@+id/educationList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:divider="@null"
+                android:dividerHeight="@dimen/_5sdp"
+                android:stackFromBottom="true"
+                android:transcriptMode="normal"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.100"
+            android:background="@color/white" />
+    </LinearLayout>
+</layout>

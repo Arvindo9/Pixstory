@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.850"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_10sdp"
+                            app:srcCompat="@drawable/ic_ps_logo" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/universal_search"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.150"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_10sdp"
+                            app:srcCompat="@drawable/ic_search_black_24dp" />
+
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <View
+                android:id="@+id/blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blur"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/layoutBottomNavigation"
+                layout="@layout/layout_bottom_navigation" />
+
+            <!--UPLOAD PHOTO-->
+            <include
+                android:id="@+id/bottom_sheet_upload_photo"
+                layout="@layout/bottom_sheet_upload_photo" />
+
+            <!--CREATE STORY-->
+            <include
+                android:id="@+id/bottom_sheet_create_story"
+                layout="@layout/bottom_sheet_create_story" />
+
+            <!--CREATE PAGE-->
+            <include
+                android:id="@+id/bottom_sheet_create_page"
+                layout="@layout/bottom_sheet_create_page" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

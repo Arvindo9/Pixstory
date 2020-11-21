@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".ui.dashboard.you.HomeYouActivity">
+
+            <include
+                android:id="@+id/layoutToolbar"
+                layout="@layout/toolbar_you" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@color/white"
+                android:elevation="@dimen/_5sdp">
+
+                <include
+                    android:id="@+id/layoutYouPageSetup"
+                    layout="@layout/card_you_filter" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/you_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.700"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/adapter_you_filter" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/select_images"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|end"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_weight="0.300"
+                    android:gravity="center|end"
+                    android:singleLine="true"
+                    android:text="@string/select_images"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/blue"
+                    android:visibility="gone" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/layoutYouHeader"
+                    layout="@layout/card_you_header" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewStory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        tools:listitem="@layout/card_user_header" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/card_you_pages" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewPhotos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/card_you_photos" />
+
+                    <ProgressBar
+                        android:id="@+id/main_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"/>
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/no_record_found"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:drawableTop="@drawable/ic_no_record_found_100dp"
+                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/no_record_found"
+                    android:textColor="@color/neon"
+                    android:textSize="@dimen/font_18"
+                    android:visibility="gone" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_blur"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/layoutBottomNavigation"
+            layout="@layout/layout_bottom_navigation" />
+
+        <!--UPLOAD PHOTO-->
+        <include
+            android:id="@+id/bottom_sheet_upload_photo"
+            layout="@layout/bottom_sheet_upload_photo" />
+
+        <!--CREATE STORY-->
+        <include
+            android:id="@+id/bottom_sheet_create_story"
+            layout="@layout/bottom_sheet_create_story" />
+
+        <!--CREATE PAGE-->
+        <include
+            android:id="@+id/bottom_sheet_create_page"
+            layout="@layout/bottom_sheet_create_page" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

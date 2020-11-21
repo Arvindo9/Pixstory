@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.300"
+            android:background="@android:color/transparent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.700"
+            android:background="@drawable/shape_bottom_sheet_25_25_0_0"
+            android:orientation="vertical"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="0dp"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/close_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_down_arrow"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:text="@string/notes_comment"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_14"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_14"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/source_sans_pro_regular"
+                android:text="@string/write_your_message"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:background="@drawable/shape_rectangle_gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/source_sans_pro_regular"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:maxLength="350"
+                    android:padding="@dimen/_10sdp"
+                    android:maxLines="5"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_14" />
+
+
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:text="@string/Send"
+                android:background="@drawable/rectangle_yellow"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_16"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/source_sans_pro_semi_bold"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.100"
+            android:background="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

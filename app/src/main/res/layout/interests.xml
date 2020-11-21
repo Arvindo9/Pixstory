@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="data"
+            type="com.app.pixstory.ui.interests.InterestsViewModel" />
+    </data>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/toolbar_side_nav"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_vertical">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:background="@drawable/shape_dark_3_3_3_3"
+                    android:layout_weight="0.8">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_text_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/user"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/source_sans_pro_regular"
+                                android:hint="@string/to"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <include
+                            android:id="@+id/progressBar"
+                            layout="@layout/progressbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:hint="@string/enter_interests"
+                        android:imeOptions="actionSend"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_14"
+                        android:fontFamily="@font/source_sans_pro_regular"/>
+-->
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/add"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/font_14"
+                    android:layout_weight=".2"
+                    android:gravity="center"
+                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/addUserInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:scrollbars="none" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/link_related_interests"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_14"
+                android:fontFamily="@font/source_sans_pro_semi_bold"/>
+
+            <com.app.pixstory.base.views.BaseLinearTextHorizontal
+                android:id="@+id/masterCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:RightMargin="5dp"
+                app:ViewSize="@dimen/_10sdp"
+                app:Layout="@layout/base_linear_horizontal_layout"
+                app:LayoutText="@layout/base_text_layout"/>
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_14"
+                android:layout_gravity="end" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_button"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_50sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_16"
+                    android:fontFamily="@font/source_sans_pro_semi_bold"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_account_graph"
+    app:startDestination="@id/navigation_account">
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.app.pixstory.ui.navigation_view.account.account_settings.AccountFragments"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_account_settings"
+            app:destination="@id/navigation_account_settings"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account_settings"
+        android:name="com.app.pixstory.ui.navigation_view.account.account_settings.AccountSettingsFragments"
+        android:label="@string/account_setting"
+        tools:layout="@layout/fragment_account_settings" />
+
+</navigation>

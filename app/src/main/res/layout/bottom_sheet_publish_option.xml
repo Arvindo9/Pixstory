@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/publish_option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.400"
+            android:background="@android:color/transparent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.600"
+            android:background="@drawable/shape_bottom_sheet_25_25_0_0"
+            android:orientation="vertical"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close_publish_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_down_arrow"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                    android:text="@string/choose_publish_option"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/font_16"/>
+
+                <RadioGroup
+                    android:id="@+id/publish_option_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/for_public"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/source_sans_pro_semi_bold"
+                        android:text="@string/for_public"
+                        android:checked="true"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/source_sans_pro_semi_bold"
+                        android:text="@string/for_friends"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/only_for_me"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/source_sans_pro_semi_bold"
+                        android:text="@string/only_for_me"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/font_14" />
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/publish_story"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_18"
+                    android:text="@string/publish"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_55sdp"
+                    android:layout_marginEnd="@dimen/_55sdp"
+                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/shape_neon_black_25"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.100"
+            android:background="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="?actionBarSize"
+        android:clickable="true"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <View
+            android:id="@+id/views"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/shape_bottom_sheet_25_25_0_0"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/close_preference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_down_arrow"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:text="Update your preferences"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:text="@string/show_profile_activity_other"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_weight="0.6" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/show_your_profile_spinner"
+                        android:layout_width="0dp"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/show_your_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.10"
+                        android:layout_gravity="end"
+                        tools:checked="true"
+                        android:theme="@style/switchTheme"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/dark_blur"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_5sdp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:text="@string/show_profile_activity_people"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_weight="0.6" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:visibility="invisible"
+                        android:id="@+id/show_my_profile_spinner"
+                        android:layout_width="0dp"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/show_my_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.10"
+                        android:layout_gravity="end"
+                        tools:checked="true"
+                        android:theme="@style/switchTheme"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/dark_blur"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_5sdp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:text="@string/allow_others"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/allow_others_spinner"
+                        android:layout_width="0dp"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30"
+                        android:visibility="invisible"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/allow_others"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.10"
+                        android:layout_gravity="end"
+                        tools:checked="true"
+                        android:theme="@style/switchTheme"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/dark_blur"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_5sdp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/help_other"
+                        android:gravity="center|start"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_weight="0.6" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/help_other_spinner"
+                        android:layout_width="0dp"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/help_other"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.10"
+                        android:layout_gravity="end"
+                        tools:checked="true"
+                        android:theme="@style/switchTheme"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:layout_weight="0.1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/shape_neon_25_25_25_25"
+                android:fontFamily="@font/source_sans_pro_bold"
+                android:gravity="center|bottom"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/save"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

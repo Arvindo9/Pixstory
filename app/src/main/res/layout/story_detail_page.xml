@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="com.app.pixstory.ui.dashboard.story_detail.model.StoryDetailModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/layoutToolbar"
+                    layout="@layout/toolbar_story_details" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/cardUserProfile"
+                            layout="@layout/card_user_profile" />
+
+                        <include
+                            android:id="@+id/cardStorySlide"
+                            layout="@layout/card_story_slide" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="0.100">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/support"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/shape_button"
+                                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:singleLine="true"
+                                    android:text="@string/support"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_12" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/support_count"
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:background="@drawable/circle_red"
+                                    android:fontFamily="@font/source_sans_pro_regular"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/font_10"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_5sdp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.025" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="0.100">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/challenge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/shape_button"
+                                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:singleLine="true"
+                                    android:text="@string/challenge"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_12" />
+
+                                <TextView
+                                    android:id="@+id/challenge_count"
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:background="@drawable/circle_red"
+                                    android:fontFamily="@font/source_sans_pro_regular"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/font_10"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_5sdp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.025" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="0.100">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/notes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/shape_button"
+                                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:singleLine="true"
+                                    android:text="@string/tag_in"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_12" />
+
+                                <TextView
+                                    android:id="@+id/note_count"
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:background="@drawable/circle_red"
+                                    android:fontFamily="@font/source_sans_pro_regular"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/font_10"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:fontFamily="@font/source_sans_pro_regular"
+                            android:gravity="center"
+                            android:text="@string/the_content"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_10" />
+
+
+                        <include
+                            android:id="@+id/cardStoryNarrative"
+                            layout="@layout/card_story_narrative" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <View
+                android:id="@+id/blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blur"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/bottom_sheet_add_notes"
+            layout="@layout/bottom_sheet_add_notes" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

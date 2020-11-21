@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.app.pixstory.ui.dashboard.home.adapter.HomeInterestViewModel" />
+    </data>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layoutUserHeader"
+                layout="@layout/card_user_header" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

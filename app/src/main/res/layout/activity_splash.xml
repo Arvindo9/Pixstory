@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/neon"
+        android:orientation="vertical"
+        tools:context=".ui.splash.SplashActivity">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.300"/>
+
+<!--
+        <TextView
+            android:id="@+id/hashKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="hi"
+            android:gravity="center"
+            />
+-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.160"
+            android:layout_gravity="center"
+            android:src="@drawable/pixstory_logo"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.160"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.180"
+            android:layout_gravity="end"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pixstory_logo_dark"/>
+
+
+    </LinearLayout>
+
+
+</layout>

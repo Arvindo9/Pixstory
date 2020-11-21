@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".ui.login_dashboard.login_signup_dashboard.fragments.signup.SignUpFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_text_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:fontFamily="@font/source_sans_pro_regular" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trouble_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:layout_gravity="start"
+            android:visibility="gone"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:text="@string/trouble_logging_in" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

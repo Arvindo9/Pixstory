@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <include
+                android:id="@+id/layoutToolbar"
+                layout="@layout/toolbar_story_details" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/cardUserProfile"
+                        layout="@layout/card_user_profile" />
+
+                    <include
+                        android:id="@+id/cardStorySlide"
+                        layout="@layout/card_story_slide" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="0.100">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/support"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/shape_button"
+                                android:fontFamily="@font/source_sans_pro_semi_bold"
+                                android:gravity="center"
+                                android:padding="@dimen/_3sdp"
+                                android:singleLine="true"
+                                android:text="@string/support"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_14" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/support_count"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="top|center_horizontal"
+                                android:background="@drawable/circle_red"
+                                android:fontFamily="@font/source_sans_pro_regular"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/font_10"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.025" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="0.100">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/challenge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/shape_button"
+                                android:fontFamily="@font/source_sans_pro_semi_bold"
+                                android:gravity="center"
+                                android:padding="@dimen/_3sdp"
+                                android:singleLine="true"
+                                android:text="@string/challenge"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_14" />
+
+                            <TextView
+                                android:id="@+id/challenge_count"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="top|center_horizontal"
+                                android:background="@drawable/circle_red"
+                                android:fontFamily="@font/source_sans_pro_regular"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/font_10"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.025" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="0.100">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/notes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/shape_button"
+                                android:fontFamily="@font/source_sans_pro_semi_bold"
+                                android:gravity="center"
+                                android:padding="@dimen/_3sdp"
+                                android:singleLine="true"
+                                android:text="@string/tag_in"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_14" />
+
+                            <TextView
+                                android:id="@+id/note_count"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="top|center_horizontal"
+                                android:background="@drawable/circle_red"
+                                android:fontFamily="@font/source_sans_pro_regular"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/font_10"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:fontFamily="@font/source_sans_pro_regular"
+                        android:gravity="center"
+                        android:text="@string/the_content"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font_10" />
+
+
+                    <include
+                        android:id="@+id/cardStoryNarrative"
+                        layout="@layout/card_story_narrative" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/publish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_55sdp"
+                        android:layout_marginEnd="@dimen/_55sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/shape_neon_black_25"
+                        android:fontFamily="@font/source_sans_pro_semi_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/publish"
+                        android:textSize="@dimen/font_18" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.core.widget.NestedScrollView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blur"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/bottom_sheet_publish_option"
+            layout="@layout/bottom_sheet_publish_option" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

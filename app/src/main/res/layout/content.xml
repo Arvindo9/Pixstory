@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layoutToolbar"
+                layout="@layout/toolbar_you_filter" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/place_holder" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/source_sans_pro_semi_bold"
+                        android:gravity="start|bottom"
+                        android:text="@string/add_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_14" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/addTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@color/white_smoke"
+                        android:fontFamily="@font/source_sans_pro_regular"
+                        android:inputType="textMultiLine"
+                        android:maxLength="94"
+                        android:maxLines="3"
+                        android:overScrollMode="always"
+                        android:padding="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:singleLine="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_14" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/add_narrative_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/source_sans_pro_semi_bold"
+                        android:gravity="start|bottom"
+                        android:text="@string/add_narrative"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_14" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/addNarrative"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@color/white_smoke"
+                            android:fontFamily="@font/source_sans_pro_regular"
+                            android:maxLength="350"
+                            android:maxLines="3"
+                            android:overScrollMode="always"
+                            android:padding="@dimen/_10sdp"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_14" />
+
+                        <include
+                            android:id="@+id/add_caption_button"
+                            layout="@layout/button_add_caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/_20sdp" />
+
+                    </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/addInterest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_neon"
+                            android:fontFamily="@font/source_sans_pro_semi_bold"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/add_interests"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_14" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_55sdp"
+                            android:layout_marginEnd="@dimen/_55sdp"
+                            android:background="@drawable/shape_neon_black_25"
+                            android:fontFamily="@font/source_sans_pro_semi_bold"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/next"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_16" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

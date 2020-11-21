@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:layout_gravity="center"
+    app:tabGravity="fill"
+    app:tabIndicatorColor="@color/neon"
+    app:tabMode="fixed"
+    app:tabIndicatorHeight="@dimen/_2sdp"
+    app:tabRippleColor="@color/neon"
+    app:tabSelectedTextColor="@color/black"
+    app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+    app:tabTextColor="@color/black" />
+</layout>

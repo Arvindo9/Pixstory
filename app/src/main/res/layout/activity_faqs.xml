@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_back_arrow_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/submit_your_question"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/source_sans_pro_regular"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ques"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.85"
+                android:background="@drawable/shape_black_5_5_5_5"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_15sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:fontFamily="@font/source_sans_pro_regular"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/audio"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_mic" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/submit"
+            android:layout_gravity="end"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_45sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:groupIndicator="@null"
+                android:childDivider="#00000000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

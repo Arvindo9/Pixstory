@@ -1,0 +1,151 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Theme.AppCompat.Translucent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget" tools:ignore="PrivateResource">
+        <item name="tabBackground">@drawable/tab_background</item>
+    </style>
+
+    <!--Switch Theme-->
+    <style name="switchTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+    </style>
+
+
+    <style name="picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColor">@color/neon</item>
+    </style>
+
+    <style name="DateDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="default_dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <!--        <item name="android:windowNoTitle">true</item>-->
+    </style>
+
+
+    <!--Click event-->
+    <style name="clickThemeNormal">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <!--        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>-->
+        <item name="android:foreground">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--For EditText only text-->
+    <style name="editTextMessage" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textColor">@color/textColorDefault</item>
+        <item name="android:textSize">@dimen/textSizeDefault</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:inputType">textShortMessage|textAutoCorrect|textCapSentences|textMultiLine</item>
+        <item name="android:imeOptions">actionSend|flagNoEnterAction</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:hint">@string/type</item>
+        <item name="android:paddingStart">@dimen/_5sdp</item>
+        <item name="android:paddingEnd">@dimen/_5sdp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <!--==============================-->
+    <!--Messages-->
+
+    <!--For TextText message send-->
+    <style name="textViewMessageSend" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textColor">@color/textColorDefault</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_gravity">end</item>
+    </style>
+
+    <!--For TextText message send-->
+    <style name="messageSend">
+        <item name="android:focusable">false</item>
+        <item name="android:background">@drawable/shape_message_send</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+    </style>
+
+    <!--For TextText message receive-->
+    <style name="textViewMessageReceive" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textColor">@color/textColorDefault</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <!--For TextText message receive-->
+    <style name="messageReceive">
+        <item name="android:focusable">false</item>
+        <item name="android:background">@drawable/shape_message_receive</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">center_vertical|start</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="messageFriendRequest">
+        <item name="android:focusable">false</item>
+        <item name="android:background">@drawable/shape_blue_message_25_25_25_25</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">center_vertical|start</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+    </style>
+
+
+
+
+
+
+
+</resources>

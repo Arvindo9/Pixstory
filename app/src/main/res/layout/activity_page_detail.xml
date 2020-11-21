@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_create_page_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:background="@android:color/black"
+                        app:layout_constraintDimensionRatio="H,3:4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/black">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/vereight" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                style="@style/TextAppearance.AppCompat.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/trending"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/shape_dark_neon_25"
+                                    android:fontFamily="@font/source_sans_pro_regular"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:text="@string/trending"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_10"
+                                    android:visibility="gone" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/page_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_10sdp"
+                                    android:background="@drawable/rectangle_black"
+                                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                                    android:maxLines="3"
+                                    android:padding="@dimen/_5sdp"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_14"
+                                    android:visibility="gone" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.100" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.100">
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.145" />
+
+                                    <LinearLayout
+                                        android:id="@+id/list_layout"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:layout_weight="0.230"
+                                        android:background="@drawable/rectangle_black"
+                                        android:orientation="vertical"
+                                        android:visibility="visible">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="0dp"
+                                            android:layout_gravity="center"
+                                            android:layout_margin="@dimen/_5sdp"
+                                            android:layout_weight="0.1"
+                                            android:background="@drawable/shape_rect_angled"
+                                            android:fontFamily="@font/source_sans_pro_semi_bold"
+                                            android:gravity="center"
+                                            android:text="@string/page_stories"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/font_12" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight=".8">
+
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/recycler_view"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="@dimen/_5sdp"
+                                                android:overScrollMode="never"
+                                                android:scrollbars="none" />
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/see_more"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="0dp"
+                                            android:layout_gravity="end"
+                                            android:layout_marginEnd="@dimen/_10sdp"
+                                            android:layout_weight=".1"
+                                            android:background="@drawable/shape_rect_angled_blue"
+                                            android:fontFamily="@font/source_sans_pro_regular"
+                                            android:gravity="center"
+                                            android:layout_margin="@dimen/_5sdp"
+                                            android:text="@string/see_mores"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/font_14" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </FrameLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/storyType"
+                        layout="@layout/story_type_layout" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/creator_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/source_sans_pro_regular"
+                            android:text="@string/lorem_ipsum_message"
+                            android:textSize="@dimen/font_14" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/source_sans_pro_semi_bold"
+                                android:text="@string/created_by"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/font_12" />
+
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/source_sans_pro_regular"
+                                android:text="@string/title"
+                                android:textSize="@dimen/font_12" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".2">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_image"
+                                    android:layout_width="@dimen/_50sdp"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:src="@drawable/user" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_gravity="center" />
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".8"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/creator_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                                    android:text="@string/title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_16" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".25"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/badge_recycler_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:overScrollMode="never"
+                                            android:scrollbars="none" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".75"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/source_sans_pro_regular"
+                                            android:text=" | "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/font_12" />
+
+                                        <TextView
+                                            android:id="@+id/integrity_score"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/source_sans_pro_regular"
+                                            android:text="@string/title"
+                                            android:textColor="@color/blue"
+                                            android:textSize="@dimen/font_12" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.dashboard.upload.UploadPageActivity">
+
+            <include
+                android:id="@+id/layoutToolbar"
+                layout="@layout/toolbar_create_story" />
+
+            <include
+                android:id="@+id/create_story_from"
+                layout="@layout/create_story_from"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.050"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.600">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/no_record_found"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_image_black_24dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:visibility="visible"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/adapter_select_image"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="0.080">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/font_16"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:layout_marginEnd="@dimen/_70sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/source_sans_pro_semi_bold"
+                    android:background="@drawable/shape_neon_black_25"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

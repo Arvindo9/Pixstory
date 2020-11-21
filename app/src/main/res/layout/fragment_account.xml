@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/account_settings"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/account_setting"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacy_settings"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/privacy"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/promembership_setting"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/pixpoints"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/terms_of_use"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/privacy_policy"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/faqs"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/contact_us"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/dark_blur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/source_sans_pro_semi_bold"
+                android:gravity="center|start"
+                android:text="@string/about"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_blur"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/bottom_sheet_privacy"
+            layout="@layout/bottom_sheet_privacy" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "771764630754",
+    "firebase_url": "https://pixstory-2ad50.firebaseio.com",
+    "project_id": "pixstory-2ad50",
+    "storage_bucket": "pixstory-2ad50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771764630754:android:42a3b9fab9ccc5c8c8dabb",
+        "android_client_info": {
+          "package_name": "com.app.pixstory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771764630754-0omg6ihm9tfb6nt8o06i29geq5v72ukl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjXUWuzEmGTetg_F9XayUNdB7W-4BY4Z8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771764630754-0omg6ihm9tfb6nt8o06i29geq5v72ukl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

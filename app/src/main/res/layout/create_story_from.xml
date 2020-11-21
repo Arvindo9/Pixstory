@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/your_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/shape_white_black_25"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/your_photos"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/favourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_neon_black_25"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/favourites"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/phone_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/shape_neon_black_25"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/phone_gallery"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_10" />
+
+    </RelativeLayout>
+
+</layout>
